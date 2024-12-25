@@ -1,0 +1,225 @@
+@import url('globals.css');
+
+body {
+    background: var(--color-slate-100)
+} 
+
+.text-gray {
+    color: var(--color-gray);
+}
+
+.under-line {
+    text-decoration: underline;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 70dvw;
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 25px;
+    background: var(--color-white);
+}
+
+.left {
+    width: 100%;
+    padding: 30px 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+        color: var(--color-slate-900);
+    }
+}
+
+.amount {
+    margin-top: 40px;
+    color: var(--color-gray);
+}
+.input-container {
+    margin-top: 10px;
+    width: 100%;
+    border: var(--color-slate-700) 1px solid;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    .unit {
+        height: 100%;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-slate-100);
+        border-radius: 4px 0px 0px 4px;
+        color: var(--color-slate-700);
+        font-weight: 700;
+    }
+    .input-field {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 4px 4px 0px;
+        border: none;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* .input-container:hover {
+    border: var(--color-lime) 1px solid;
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+input:focus {
+    outline: none;
+}
+input {
+    color: var(--color-slate-700);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* DUO INPUT */
+
+.duo-input{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.duo-input > div {
+    margin-top: 20px;
+    color: var(--color-gray);
+}
+.duo-input .input-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.duo-input .input-container .unit {
+    border-radius: 0px 4px 4px 0px;
+}
+.duo-input .input-field {
+    border-radius: 4px 0 0 4px;
+}
+
+/* TYPE */
+.type {
+    margin-top: 20px;
+    color: var(--color-gray);
+}
+
+.type .input-radio {
+  margin: 0px 10px;
+}
+
+.radio-label {
+    color: var(--color-slate-900);
+    font-weight: 700;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--color-lime);
+    background-color: #fafae0;  
+}
+
+
+
+.input-container input[type='radio']:checked:after {
+    background-color: #fafae0;
+}
+
+.btn-submit {
+    margin-top: 30px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-lime);    
+    color: var(--color-slate-900);
+    font-weight: 700;
+}
+
+.btn-submit > img {
+    width: 1.3rem;
+}
+
+.btn-submit > span {
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+}
+
+
+/* RIGHT SECTION */
+
+.right {
+    width: 100%;
+    padding: 0 35px;
+    background: var(--color-slate-900);
+    border-radius: 0 25px 25px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right > h3 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.right > span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-slate-300);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1.2fr;
+        width: 100%;
+        border-radius: 0;
+    }
+    .right {
+        border-radius: 0;
+    }
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+    .duo-input{
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    .header {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+}
